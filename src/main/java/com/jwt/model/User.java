@@ -7,8 +7,8 @@ import javax.persistence.*;
 public class User  {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO) //to increment field automatically
+    private Long id;  //primary key
     private String username;
     private String password;
     private String email;

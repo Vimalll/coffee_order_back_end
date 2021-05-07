@@ -58,7 +58,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter
                 .disable()
                 .authorizeRequests()
                 .antMatchers("/token").permitAll()  // FOR TOKEN API SPRING SECURITY IS DISABLED, no jwt authentication needed
-                .antMatchers("/registration").permitAll()
+                .antMatchers("/registration").permitAll()   // SAME FOR REGISTRATION api
                 .anyRequest().authenticated()
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
